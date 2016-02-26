@@ -1,1 +1,1 @@
-module.exports = require('./lib/mws');
+module.exports = require('./lib/jet');
