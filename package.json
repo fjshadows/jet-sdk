@@ -1,19 +1,17 @@
 {
-  "name": "mws-sdk-promises",
-  "description": "Amazon Marketplace Web Services client with support for all api calls, using ES6 Promises.",
+  "name": "jet-sdk",
+  "description": "Jet.com Marketplace Web Services client with support for all api calls, using ES6 Promises.",
   "keywords": [
-    "mws",
-    "amazon",
+    "jet",
+    "jet.com",
     "marketplace",
-    "fba",
     "sellers"
   ],
   "homepage": "http://_",
-  "version": "0.9.15",
+  "version": "0.0.1",
   "author": {
-    "name": "Eibbor Srenduas",
-    "email": "robbies@eibbors.net",
-    "url": "http://eibbors.net"
+    "name": "Nikita Zolotuhin",
+    "email": "fjshadows@ya.ru"
   },
   "contributors": [{
     "name": "Adrian Sanchezdelc",
@@ -24,14 +22,17 @@
   }, {
     "name": "Alex I. Vedmedenko",
     "email": "vedmalex@gmail.com"
+  }, {
+    "name": "Nikita Zolotuhin",
+    "email": "fjshadows@ya.ru"
   }],
-  "main": "./lib/mws",
+  "main": "./lib/jet",
   "directories": {
     "lib": "./lib"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/vedmalex/mws-sdk.git"
+    "url": "https://github.com/fjshadows/jet-sdk.git"
   },
   "dependencies": {
     "xml2js": "^0.4.12",
@@ -46,6 +47,7 @@
     "test": "mocha -t 5000"
   },
   "bugs": {
-    "url": "https://github.com/ticadia/mws-sdk/issues"
-  }
+    "url": "https://github.com/fjshadows/jet-sdk/issues"
+  },
+  "license": "MIT"
 }
