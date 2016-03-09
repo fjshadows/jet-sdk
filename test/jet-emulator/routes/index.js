@@ -30,7 +30,7 @@ router.post('/api/token', function(req, res, next) {
   res.send(JSON.stringify(result));
 });
 
-router.get('/api/merchant-skus/testsku*', function(req, res, next) {
+router.get('/api/merchant-skus/testsku', function(req, res, next) {
   var result = {
     "status":"Available for Purchase",
     "product_title": "My Product",
@@ -114,6 +114,15 @@ router.get('/api/merchant-skus', function(req, res, next) {
       "merchant-skus/testsku2",
       "merchant-skus/errsku2"
     ]
+  };
+  res.send(JSON.stringify(result));
+});
+
+router.get('/api/merchant-skus/testsku/price', function(req, res, next) {
+  var result = {
+    "fulfillment_nodes": [],
+    "price": 10,
+    "price_last_update": "2015-09-10T18:07:20.0830684+00:00"
   };
   res.send(JSON.stringify(result));
 });
