@@ -127,4 +127,21 @@ router.get('/api/merchant-skus/testsku/price', function(req, res, next) {
   res.send(JSON.stringify(result));
 });
 
+router.get('/api/merchant-skus/testsku/inventory', function(req, res, next) {
+  var result = {
+    "fulfillment_nodes": [
+      {
+        "fulfillment_node_id": "XISNDKSANDSFNCSJKFDNFKJHFJD",
+        "quantity": 100
+      },
+      {
+        "fulfillment_node_id": "AKSDKDJIJDISJFIDFJIDSIFFISI",
+        "quantity": 20
+      }
+    ],
+    "inventory_last_update":"2015-11-03T11:48:30.6063244+00:00"
+  };
+  res.send(JSON.stringify(result));
+});
+
 module.exports = router;
