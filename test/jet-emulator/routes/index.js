@@ -144,4 +144,36 @@ router.get('/api/merchant-skus/testsku/inventory', function(req, res, next) {
   res.send(JSON.stringify(result));
 });
 
+router.get('/api/merchant-skus/testsku/shippingexception', function(req, res, next) {
+  var result = {
+    "fulfillment_nodes": [
+      {
+        "fulfillment_node_id": "XISNDKSANDSFNCSJKFDNFKJHFJD",
+        "shipping_exceptions": [
+          {
+            "service_level": "Standard",
+            "shipping_exception_type": "restricted"
+          },
+          {
+            "shipping_method": "UPS Ground",
+            "shipping_exception_type": "restricted"
+          }
+        ]
+      },
+      {
+        "fulfillment_node_id": "1234DKSANDSFNCSJKFDNFKJHFAZ",
+        "shipping_exceptions": [
+          {
+            "shipping_method": "Freight",
+            "override_type": "Additional charge",
+            "shipping_charge_amount": 3.25,
+            "shipping_exception_type": "exclusive"
+          }
+        ]
+      }
+    ]
+  };
+  res.send(JSON.stringify(result));
+});
+
 module.exports = router;

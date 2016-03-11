@@ -25,13 +25,66 @@ var Jet = require('jet-sdk'),
     client = new Jet.Client('user', 'pass', {});
 ```
 
-Using for getting Products by SKU
+Using for getting products by SKU
 
 ```javascript
 
 function GetProductBySKU(user, pass, SKU) {
   var client = new Jet.Client(user, pass, {});
   var req = Jet.Products.requests.GetProductBySKU();
+  req.set('SKU', SKU);
+  return client.auth().then(client=>client.invoke(req));
+}
+
+```
+
+Using for getting products SKU list
+
+```javascript
+
+function GetProductSKU(user, pass, offset, limit) {
+  var client = new Jet.Client(user, pass, {});
+  var req = Jet.Products.requests.GetProductSKU();
+  req.set('offset', offset);
+  req.set('limit', limit);
+  return client.auth().then(client=>client.invoke(req));
+}
+
+```
+
+Using for getting product price by SKU
+
+```javascript
+
+function GetProductPrice(user, pass, SKU) {
+  var client = new Jet.Client(user, pass, {});
+  var req = Jet.Products.requests.GetProductPrice();
+  req.set('SKU', SKU);
+  return client.auth().then(client=>client.invoke(req));
+}
+
+```
+
+Using for getting product inventory
+
+```javascript
+
+function GetProductInventory(user, pass, SKU) {
+  var client = new Jet.Client(user, pass, {});
+  var req = Jet.Products.requests.GetProductInventory();
+  req.set('SKU', SKU);
+  return client.auth().then(client=>client.invoke(req));
+}
+
+```
+
+Using for getting product shipping exception
+
+```javascript
+
+function GetProductShippingException(user, pass, SKU) {
+  var client = new Jet.Client(user, pass, {});
+  var req = Jet.Products.requests.GetProductShippingException();
   req.set('SKU', SKU);
   return client.auth().then(client=>client.invoke(req));
 }
