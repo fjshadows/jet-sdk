@@ -8,21 +8,12 @@
     "sellers"
   ],
   "homepage": "http://_",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": {
     "name": "Nikita Zolotuhin",
     "email": "fjshadows@ya.ru"
   },
   "contributors": [{
-    "name": "Adrian Sanchezdelc",
-    "email": "adrian@ticadia.com"
-  }, {
-    "name": "David F. Sklar",
-    "email": "dfsklar@gmail.com"
-  }, {
-    "name": "Alex I. Vedmedenko",
-    "email": "vedmalex@gmail.com"
-  }, {
     "name": "Nikita Zolotuhin",
     "email": "fjshadows@ya.ru"
   }],
@@ -35,7 +26,7 @@
     "url": "https://github.com/fjshadows/jet-sdk.git"
   },
   "dependencies": {
-    "xml2js": "^0.4.12",
+    "xml2js": "~0.4.13",
     "underscore": "^1.8.3",
     "request": "^2.60.0"
   },
