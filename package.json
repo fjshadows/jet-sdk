@@ -8,7 +8,7 @@
     "sellers"
   ],
   "homepage": "http://_",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "author": {
     "name": "Nikita Zolotuhin",
     "email": "fjshadows@ya.ru"
@@ -26,7 +26,7 @@
     "url": "https://github.com/fjshadows/jet-sdk.git"
   },
   "dependencies": {
-    "xml2js": "~0.4.13",
+    "xml2js": "^0.4.13",
     "underscore": "^1.8.3",
     "request": "^2.60.0"
   },
