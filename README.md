@@ -108,7 +108,7 @@ Getting ORDERS information
 
 ```javascript
 
-function GetOrders(user, pass, status) {
+function GetOrderList(user, pass, status) {
   var client = new Jet.Client(user, pass, {});
   var req = Jet.Orders.requests.GetOrders();
   req.set('status', status);
@@ -121,10 +121,10 @@ function GetOrders(user, pass, status) {
 
 ```javascript
 
-function GetOrderDetails(user, pass, orderID) {
+function GetOrder(user, pass, orderId) {
   var client = new Jet.Client(user, pass, {});
   var req = Jet.Orders.requests.GetOrderDetails();
-  req.set('orderID', orderID);
+  req.set('orderId', orderId);
   return client.auth().then(client=>client.invoke(req));
 }
 

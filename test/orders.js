@@ -2,7 +2,7 @@
 var Jet = require('../');
 
 var params = {
-  orderID: 'testsku',
+  orderId: 'testsku',
   user: 'test',
   pass: 'test',
   status: 'complete',
@@ -10,19 +10,19 @@ var params = {
   limit: 1
 }
 
-function GetOrders(params) {
+function GetOrderList(params) {
   var client = new Jet.Client(params.user, params.pass, {host:'localhost:3021'});
-  var req = Jet.Orders.requests.GetOrders();
+  var req = Jet.Orders.requests.GetOrderList();
   req.set('status', params.status);
   return client.auth().then(client=>client.invoke(req));
 }
 
-function GetOrderDetails(params) {
+function GetOrder(params) {
   var client = new Jet.Client(params.user, params.pass, {host:'localhost:3021'});
-  var req = Jet.Orders.requests.GetOrderDetails();
-  req.set('orderID', params.orderID);
+  var req = Jet.Orders.requests.GetOrder();
+  req.set('orderId', params.orderId);
   return client.auth().then(client=>client.invoke(req));
 }
 
-GetOrders(params);
-GetOrderDetails(params);
+GetOrderList(params);
+GetOrder(params);
