@@ -63,7 +63,7 @@ router.get('/withoutShipmentDetail/*', function(req, res, next) {
       "order_items": [
         {
           "order_item_id": "8f5ae15b6b414b00a1b9d6ad99166a00",
-          "merchant_sku": "B289B4B",
+          "merchant_sku": "testsku",
           "request_order_quantity": 2,
           "item_tax_code": "",
           "item_price": {
